@@ -1,19 +1,17 @@
-import Link from "next/link";
-import Image from "next/image";
+import Head from 'next/head'
+import Layout from '../../components/Layout';
 
 export default function FirstPost() {
   return (
-    <>
-      <h1>First Post</h1>
-      <Link href="/">To home...</Link>
-      <div>
-        <Image
-          src="/images/photo.jpeg" // Route of the image file
-          height={320} // Desired size with correct aspect ratio
-          width={240} // Desired size with correct aspect ratio
-          alt="Your Name"
-        />
-      </div>
-    </>
+    <Layout>
+      <Head>
+        <title>First Post :D</title>
+      </Head>
+      <h1>First Post</h1>      
+      <p>
+        (This is a sample website - you’ll be building a site like this on{' '}
+        <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+      </p>
+    </Layout>
   );
 }
